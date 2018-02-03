@@ -11,12 +11,6 @@ I tried to keep things as simple as possible. Basic but classy transitions, as w
 ---
 # Some Screenshots ☄️
 ![Theme Screenshot](http://tw.greywool.com/i/kCtSH.png)
-<<<<<<< HEAD
 ![Theme Screenshot](http://tw.greywool.com/i/BVzgp.png)
 
 # ANY CONTRIBUTION IS WELCOMED
-=======
-
-
-# ANY CONTRIBUTION IS WELCOMED 
->>>>>>> 4c1d242874d2df23134a31d0a41be4419b47e443
