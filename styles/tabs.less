@@ -1,0 +1,79 @@
+
+  // Tabs
+  // -------------------
+
+  // Displays selectable tabs above the editor.
+  // Overrides: atom/tabs
+
+  .tab-bar {
+    background-color: @tab-bar-background-color;
+    //background-image: linear-gradient(to right,#F9A538,#FF4F94);
+    .tab {
+      margin: 2px 0 0px 0;
+      size: 100px 100px;
+      border-style: solid;
+      border-color: transparent;
+  	&::after {
+  		content: '';
+  		position: absolute;
+  		left: 50%;
+  		bottom: 0;
+  		transform: translateX(-50%) scaleX(0);
+  		transform-origin: 50% 10%;
+  		width: 100%;
+  		height: 2.5px;
+  		background-image: linear-gradient(to right, #5e42a6, #b74e91);
+  		transition: transform 200ms;
+      margin-bottom: -1px;
+  	}
+  	&:hover {
+  		&::after {
+  			transform: translateX(-50%) scaleX(1);
+  		}
+  	}
+      color: rgba(255,255,255,0.5);
+      height: @tab-height;
+      line-height: @tab-height;
+      font-size: @font-size;
+      transition-timing-function: ease-in;
+      &.active {
+        color: white;//@text-color-selected;
+        background-color: @tab-background-color-active;
+        background-color: #5e42a6;
+        font-weight: bold;
+      }
+
+
+      // Modified Icon (the circle) -------------------
+      &.modified:not(:hover) .close-icon {
+        top: 50%;
+        right: @component-padding + 4px; // 4px -> half of icon size
+        margin-top: -3px;
+        border-color: @text-color-info;
+      }
+      &.modified:hover .close-icon {
+        color: currentColor;
+      }
+
+
+      // Close Icon (the X) -------------------
+      .close-icon:hover {
+        color: @text-close;
+      }
+      &.active .close-icon:hover {
+        color: @text-close;
+      }
+
+
+      // Dragging -------------------
+      // Styles get applied while dragging a tab
+      &.is-dragging {
+        background: darken(@tab-background-color, 10%);
+        border-color: transparent;
+        opacity: .5;
+        & .close-icon {
+          visibility: hidden;
+        }
+      }
+    }
+  }

@@ -1,0 +1,22 @@
+
+// Git
+// -------------------
+
+// Used to color git status
+
+.status          { color: @text-color; }
+.status-added    { color: green; } //@text-color-success; } // green
+.status-ignored  { color: @text-color-subtle; font-style: italic;}  // faded
+.status-modified { color: @text-color-warning; } // orange
+.status-removed  { color: @text-color-error; }   // red
+.status-renamed  { color: rgb(100,20,150,1); }    // blue
+
+.github-HunkView-line.is-added .github-HunkView-lineContent {
+    color: #ffffff;
+    background-color: #008b1e;
+}
+
+.github-HunkView-line.is-deleted .github-HunkView-lineContent {
+    color: #ffffff;
+    background-color: #730000;
+}
